@@ -9,16 +9,16 @@ import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
 @SpringBootApplication
 public class TelegramBotApplication {
 
-	public static void main(String[] args) throws TelegramApiException {
+    public static void main(String[] args) throws TelegramApiException {
 
-		SpringApplication.run(TelegramBotApplication.class, args);
+        SpringApplication.run(TelegramBotApplication.class, args);
 
-		TelegramBotsApi telegramBotsApi = new TelegramBotsApi(DefaultBotSession.class);
-		try{
-			telegramBotsApi.registerBot(new MyBot());
-		}catch (Exception e){
-			e.printStackTrace();
-		}
-	}
+        TelegramBotsApi telegramBotsApi = new TelegramBotsApi(DefaultBotSession.class);
+        try {
+            telegramBotsApi.registerBot(new MyBot());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
 }

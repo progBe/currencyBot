@@ -1,18 +1,17 @@
 package com.example.telegramBot;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
+import java.time.LocalDateTime;
 
-import java.util.HashMap;
 
 @Data
-@JsonInclude(JsonInclude.Include.NON_NULL)
 public class Currency {
 
     private String base;
 
-    private String date;
+    private LocalDateTime date;
 
-    private HashMap<String, String> rates;
+    private double kztRate;
+
 
 }
